@@ -16,7 +16,7 @@
 		C6B9F44025246DCD00D3316E /* iOSExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B9F43F25246DCD00D3316E /* iOSExampleTests.swift */; };
 		C6B9F44B25246DCE00D3316E /* iOSExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B9F44A25246DCE00D3316E /* iOSExampleUITests.swift */; };
 		C6B9F46025246DF500D3316E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B9F45F25246DF500D3316E /* DataManager.swift */; };
-		C6B9F46625246E0800D3316E /* KStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C6B9F46525246E0800D3316E /* KStorage */; };
+		C6B9F46C252471C600D3316E /* KStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C6B9F46B252471C600D3316E /* KStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		C6B9F44625246DCE00D3316E /* iOSExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B9F44A25246DCE00D3316E /* iOSExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExampleUITests.swift; sourceTree = "<group>"; };
 		C6B9F44C25246DCE00D3316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6B9F45B25246DD900D3316E /* KStorage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = KStorage; path = ..; sourceTree = "<group>"; };
 		C6B9F45F25246DF500D3316E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6B9F46625246E0800D3316E /* KStorage in Frameworks */,
+				C6B9F46C252471C600D3316E /* KStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +83,6 @@
 		C6B9F41C25246DCC00D3316E = {
 			isa = PBXGroup;
 			children = (
-				C6B9F45B25246DD900D3316E /* KStorage */,
 				C6B9F42725246DCC00D3316E /* iOSExample */,
 				C6B9F43E25246DCD00D3316E /* iOSExampleTests */,
 				C6B9F44925246DCE00D3316E /* iOSExampleUITests */,
@@ -160,7 +158,7 @@
 			);
 			name = iOSExample;
 			packageProductDependencies = (
-				C6B9F46525246E0800D3316E /* KStorage */,
+				C6B9F46B252471C600D3316E /* KStorage */,
 			);
 			productName = iOSExample;
 			productReference = C6B9F42525246DCC00D3316E /* iOSExample.app */;
@@ -233,6 +231,9 @@
 				Base,
 			);
 			mainGroup = C6B9F41C25246DCC00D3316E;
+			packageReferences = (
+				C6B9F46A252471C600D3316E /* XCRemoteSwiftPackageReference "KStorage" */,
+			);
 			productRefGroup = C6B9F42625246DCC00D3316E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -613,9 +614,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		C6B9F46A252471C600D3316E /* XCRemoteSwiftPackageReference "KStorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jerometonnelier/KStorage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		C6B9F46525246E0800D3316E /* KStorage */ = {
+		C6B9F46B252471C600D3316E /* KStorage */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = C6B9F46A252471C600D3316E /* XCRemoteSwiftPackageReference "KStorage" */;
 			productName = KStorage;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 public typealias Handler<T> = (Result<T, Error>) -> Void
 public typealias StorageKey = String
@@ -181,7 +182,6 @@ public class DataStorage {
     public init() {
     }
     
-    
     /**
      Saves an image as Data on Disk an returns
      
@@ -210,6 +210,15 @@ public class DataStorage {
     }
     
     private func saveToCameraRoll(image: UIImage) {
+        guard PHPhotoLibrary.authorizationStatus() == .authorized else {
+            PHPhotoLibrary.requestAuthorization({ status in
+                switch status {
+                case .authorized: UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                default: ()
+                }
+            })
+            return
+        }
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
     

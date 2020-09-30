@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "KStorage",
+        "repositoryURL": "https://github.com/jerometonnelier/KStorage",
+        "state": {
+          "branch": "master",
+          "revision": "6a6ebc34d5107b235f76ff5d9906e13e88f9ec51",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
