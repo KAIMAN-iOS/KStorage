@@ -21,8 +21,5 @@ let package = Package(
         .target(
             name: "KStorage",
             dependencies: []),
-        .testTarget(
-            name: "KStorageTests",
-            dependencies: ["KStorage"]),
     ]
 )
