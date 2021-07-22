@@ -222,8 +222,8 @@ public class DataStorage {
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
     
-    public func fetchImage(at url: URL) throws -> UIImage? {
-        let data = try storage.storage.fetchValue(for: url.lastPathComponent)
+    public func fetchImage(at url: URL, commponent: String? = nil) throws -> UIImage? {
+        let data = try storage.storage.fetchValue(for: commponent ?? url.lastPathComponent)
         return UIImage(data: data)
     }
     
